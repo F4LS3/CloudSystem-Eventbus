@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>dev.f4ls3</groupId>
+  <artifactId>CloudSystem-Eventbus</artifactId>
+  <versioning>
+    <release>0.0.1-ALPHA</release>
+    <versions>
+      <version>0.0.1-ALPHA</version>
+    </versions>
+    <lastUpdated>20210810141858</lastUpdated>
+  </versioning>
+</metadata>
