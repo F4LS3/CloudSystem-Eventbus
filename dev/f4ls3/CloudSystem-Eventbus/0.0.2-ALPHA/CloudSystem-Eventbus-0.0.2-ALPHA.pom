@@ -6,7 +6,7 @@
 
     <groupId>dev.f4ls3</groupId>
     <artifactId>CloudSystem-Eventbus</artifactId>
-    <version>0.0.1-ALPHA</version>
+    <version>0.0.2-ALPHA</version>
 
     <build>
         <plugins>
