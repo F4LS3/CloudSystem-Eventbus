@@ -1,24 +1,33 @@
 package dev.f4ls3.cloudsystem.eventbus;
 
-public class Event {
+public abstract class Event {
 
-    private final EventType type;
+    private boolean cancelled;
+    private int eventId;
 
-    private boolean isCanceled;
-
-    protected Event(EventType type) {
-        this.type = type;
+    protected Event(int eventId) {
+        this.eventId = eventId;
     }
 
-    public void setCanceled(boolean canceled) {
-        this.isCanceled = canceled;
+    /**
+     * Cancels the handling of the published event for all following subscribers,
+     * that have the ignoreCancelled variable on false
+     * */
+    public void setCancelled() {
+        this.cancelled = true;
     }
 
-    public boolean isCanceled() {
-        return isCanceled;
+    /**
+     * @return Whether the event is cancelled or not
+     * */
+    public boolean isCancelled() {
+        return cancelled;
     }
 
-    public EventType getType() {
-        return this.type;
+    /**
+     * @return The id of the event
+     * */
+    public int getEventId() {
+        return eventId;
     }
 }
