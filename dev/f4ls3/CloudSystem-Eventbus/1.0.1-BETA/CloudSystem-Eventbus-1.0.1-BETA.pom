@@ -3,11 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>dev.f4ls3</groupId>
     <artifactId>CloudSystem-Eventbus</artifactId>
-    <version>0.0.2-ALPHA</version>
-
+    <version>1.0.1-BETA</version>
     <build>
         <plugins>
             <plugin>
@@ -19,7 +17,6 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
@@ -27,21 +24,20 @@
                     <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.11</version>
                 <configuration>
-                    <message>release ${project.version}</message> <!-- git commit message -->
-                    <noJekyll>true</noJekyll>  <!-- disable webpage processing -->
-                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-                    <branch>refs/heads/mvn-repo</branch> <!-- remote branch name -->
+                    <message>release ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+                    <branch>refs/heads/mvn-repo</branch>
                     <includes><include>**/*</include></includes>
-                    <repositoryName>CloudSystem-Eventbus</repositoryName> <!-- github repo name -->
-                    <repositoryOwner>f4ls3</repositoryOwner> <!-- organization or user name  -->
+                    <repositoryName>CloudSystem-Eventbus</repositoryName>
+                    <repositoryOwner>f4ls3</repositoryOwner>
                 </configuration>
-                <executions> <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+                <executions>
                     <execution>
                         <goals>
                             <goal>site</goal>
@@ -52,15 +48,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha2</version>
-        </dependency>
-    </dependencies>
-
     <distributionManagement>
         <repository>
             <id>internal.repo</id>
@@ -68,7 +55,6 @@
             <url>file://${project.build.directory}/mvn-repo</url>
         </repository>
     </distributionManagement>
-
     <properties>
         <github.global.server>github</github.global.server>
     </properties>
