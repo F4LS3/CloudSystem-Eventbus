@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dev.f4ls3</groupId>
     <artifactId>CloudSystem-Eventbus</artifactId>
-    <version>1.0.1-BETA</version>
+    <version>1.0.2-BETA</version>
     <build>
         <plugins>
             <plugin>

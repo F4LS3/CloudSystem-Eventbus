@@ -3,10 +3,10 @@
   <groupId>dev.f4ls3</groupId>
   <artifactId>CloudSystem-Eventbus</artifactId>
   <versioning>
-    <release>1.0.1-BETA</release>
+    <release>1.0.2-BETA</release>
     <versions>
-      <version>1.0.1-BETA</version>
+      <version>1.0.2-BETA</version>
     </versions>
-    <lastUpdated>20210816112155</lastUpdated>
+    <lastUpdated>20210816202115</lastUpdated>
   </versioning>
 </metadata>
